@@ -10,17 +10,19 @@ Concurrency training in Go - solving problems and taking notes.
 Each problem lives in its own directory with:
 
 - `solution.go` — the implementation
+- `task.md` — problem statement, constraints, and examples
 - `notes.md` — solution idea, complexity, and mistakes encountered
+- `solution_test.go` — tests for ordering, completion, and data races
 
 ## Solved
 
-**Solved: 0 problems · 10 topics**
+**Solved: 3 problems · 10 topics**
 
-**Difficulty: 0 Easy · 0 Medium · 0 Hard**
+**Difficulty: 3 Easy · 0 Medium · 0 Hard**
 
 | Topic | Solved |
 |------|--------|
-| Goroutines & Execution Order | 0 |
+| Goroutines & Execution Order | 3 |
 | Channels & Streams | 0 |
 | Shared Memory & Locks | 0 |
 | Context & Cancellation | 0 |
@@ -31,9 +33,11 @@ Each problem lives in its own directory with:
 | Debugging & Testing | 0 |
 | Caches, Actors & Brokers | 0 |
 
-## Goroutines & Execution Order (0)
+## Goroutines & Execution Order (3)
 
-No solved problems yet.
+- [x] [Print in Order](./goroutines/print-in-order/) - channel synchronization, close signals
+- [x] [Ping Pong](./goroutines/ping-pong/) - buffered channels, alternating turns
+- [x] [Zero Even Odd](./goroutines/zero-even-odd/) - parity routing, broadcast shutdown
 
 ## Channels & Streams (0)
 
