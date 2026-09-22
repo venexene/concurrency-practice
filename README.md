@@ -16,13 +16,13 @@ Each problem lives in its own directory with:
 
 ## Solved
 
-**Solved: 8 problems · 10 topics**
+**Solved: 10 problems · 10 topics**
 
-**Difficulty: 7 Easy · 1 Medium · 0 Hard**
+**Difficulty: 7 Easy · 3 Medium · 0 Hard**
 
 | Topic | Solved |
 |------|--------|
-| Goroutines & Execution Order | 8 |
+| Goroutines & Execution Order | 10 |
 | Channels & Streams | 0 |
 | Shared Memory & Locks | 0 |
 | Context & Cancellation | 0 |
@@ -33,7 +33,7 @@ Each problem lives in its own directory with:
 | Debugging & Testing | 0 |
 | Caches, Actors & Brokers | 0 |
 
-## Goroutines & Execution Order (8)
+## Goroutines & Execution Order (10)
 
 - [x] [Print in Order](./goroutines/print-in-order/) - channel synchronization, close signals
 - [x] [Ping Pong](./goroutines/ping-pong/) - buffered channels, alternating turns
@@ -43,6 +43,8 @@ Each problem lives in its own directory with:
 - [x] [Broadcast Latch](./goroutines/broadcast-latch/) - closed channel signal, sync.Once
 - [x] [Goroutine Ring](./goroutines/goroutine-ring/) - sync.Cond turn-taking, WaitGroup
 - [x] [Concurrent FizzBuzz](./goroutines/concurrent-fizz-buzz/) - sync.Cond, role-specific callbacks
+- [x] [Building Water Molecules](./goroutines/building-water-molecules/) - sync.Cond, atom slots and group barrier
+- [x] [Reusable Barrier](./goroutines/reusable-barrier/) - per-generation channels, mutex-protected arrivals
 
 ## Channels & Streams (0)
 
