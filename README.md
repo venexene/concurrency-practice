@@ -16,14 +16,14 @@ Each problem lives in its own directory with:
 
 ## Solved
 
-**Solved: 10 problems · 10 topics**
+**Solved: 15 problems · 2 topics**
 
-**Difficulty: 7 Easy · 3 Medium · 0 Hard**
+**Difficulty: 12 Easy · 3 Medium · 0 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
-| Channels & Streams | 0 |
+| Channels & Streams | 5 |
 | Shared Memory & Locks | 0 |
 | Context & Cancellation | 0 |
 | Worker Pools & Semaphores | 0 |
@@ -46,9 +46,13 @@ Each problem lives in its own directory with:
 - [x] [Building Water Molecules](./goroutines/building-water-molecules/) - sync.Cond, atom slots and group barrier
 - [x] [Reusable Barrier](./goroutines/reusable-barrier/) - per-generation channels, mutex-protected arrivals
 
-## Channels & Streams (0)
+## Channels & Streams (5)
 
-No solved problems yet.
+- [x] [Range Generator](./channel/range-generator/) - unbuffered channel, sequential generation and close
+- [x] [Collect Until Close](./channel/collect-until-close/) - channel range, ordered collection
+- [x] [Channel Map](./channel/channel-map/) - goroutine-based stream transformation
+- [x] [Non-blocking Send](./channel/non-blocking-send/) - select with default for immediate send attempts
+- [x] [Non-blocking Receive](./channel/non-blocking-receive/) - select with default and closed-channel state
 
 ## Shared Memory & Locks (0)
 
