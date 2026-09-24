@@ -16,14 +16,14 @@ Each problem lives in its own directory with:
 
 ## Solved
 
-**Solved: 15 problems · 2 topics**
+**Solved: 20 problems · 2 topics**
 
-**Difficulty: 12 Easy · 3 Medium · 0 Hard**
+**Difficulty: 13 Easy · 6 Medium · 1 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
-| Channels & Streams | 5 |
+| Channels & Streams | 10 |
 | Shared Memory & Locks | 0 |
 | Context & Cancellation | 0 |
 | Worker Pools & Semaphores | 0 |
@@ -46,13 +46,18 @@ Each problem lives in its own directory with:
 - [x] [Building Water Molecules](./goroutines/building-water-molecules/) - sync.Cond, atom slots and group barrier
 - [x] [Reusable Barrier](./goroutines/reusable-barrier/) - per-generation channels, mutex-protected arrivals
 
-## Channels & Streams (5)
+## Channels & Streams (10)
 
 - [x] [Range Generator](./channel/range-generator/) - unbuffered channel, sequential generation and close
 - [x] [Collect Until Close](./channel/collect-until-close/) - channel range, ordered collection
 - [x] [Channel Map](./channel/channel-map/) - goroutine-based stream transformation
 - [x] [Non-blocking Send](./channel/non-blocking-send/) - select with default for immediate send attempts
 - [x] [Non-blocking Receive](./channel/non-blocking-receive/) - select with default and closed-channel state
+- [x] [Take First Elements](./channel/take-first-elements/) - bounded reads, leaving the rest of the stream untouched
+- [x] [Merge Two Channels](./channel/merge-two-channels/) - select over active inputs, per-source order
+- [x] [Reliable Channel Tee](./channel/reliable-channel-tee/) - two unbuffered outputs with cancellation
+- [x] [Predicate Partition](./channel/predicate-partition/) - predicate routing with backpressure
+- [x] [Bounded Channel Queue](./channel/bounded-channel-queue/) - mutex-protected FIFO, wake-up signals and graceful close
 
 ## Shared Memory & Locks (0)
 
