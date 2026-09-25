@@ -16,15 +16,15 @@ Each problem lives in its own directory with:
 
 ## Solved
 
-**Solved: 20 problems · 2 topics**
+**Solved: 25 problems · 3 topics**
 
-**Difficulty: 13 Easy · 6 Medium · 1 Hard**
+**Difficulty: 15 Easy · 9 Medium · 1 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
 | Channels & Streams | 10 |
-| Shared Memory & Locks | 0 |
+| Shared Memory & Locks | 5 |
 | Context & Cancellation | 0 |
 | Worker Pools & Semaphores | 0 |
 | Pipelines | 0 |
@@ -59,9 +59,13 @@ Each problem lives in its own directory with:
 - [x] [Predicate Partition](./channel/predicate-partition/) - predicate routing with backpressure
 - [x] [Bounded Channel Queue](./channel/bounded-channel-queue/) - mutex-protected FIFO, wake-up signals and graceful close
 
-## Shared Memory & Locks (0)
+## Shared Memory & Locks (5)
 
-No solved problems yet.
+- [x] [Mutex Counter](./mutex/mutex-counter/) - RWMutex-protected updates and reads
+- [x] [Concurrent Integer Set](./mutex/concurrent-integer-set/) - RWMutex-protected map operations
+- [x] [Atomic Withdrawal](./mutex/atomic-withdrawal/) - lock-protected balance check and withdrawal
+- [x] [Word Frequency Snapshot](./mutex/word-frequency-snapshot/) - RWMutex-protected map cloning
+- [x] [Account Transfer](./mutex/account-transfer/) - ordered account locks and atomic IDs
 
 ## Context & Cancellation (0)
 
