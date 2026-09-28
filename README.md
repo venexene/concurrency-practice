@@ -16,15 +16,15 @@ Each problem lives in its own directory with:
 
 ## Solved
 
-**Solved: 25 problems · 3 topics**
+**Solved: 30 problems · 3 topics**
 
-**Difficulty: 15 Easy · 9 Medium · 1 Hard**
+**Difficulty: 15 Easy · 12 Medium · 3 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
 | Channels & Streams | 10 |
-| Shared Memory & Locks | 5 |
+| Shared Memory & Locks | 10 |
 | Context & Cancellation | 0 |
 | Worker Pools & Semaphores | 0 |
 | Pipelines | 0 |
@@ -59,13 +59,18 @@ Each problem lives in its own directory with:
 - [x] [Predicate Partition](./channel/predicate-partition/) - predicate routing with backpressure
 - [x] [Bounded Channel Queue](./channel/bounded-channel-queue/) - mutex-protected FIFO, wake-up signals and graceful close
 
-## Shared Memory & Locks (5)
+## Shared Memory & Locks (10)
 
 - [x] [Mutex Counter](./mutex/mutex-counter/) - RWMutex-protected updates and reads
 - [x] [Concurrent Integer Set](./mutex/concurrent-integer-set/) - RWMutex-protected map operations
 - [x] [Atomic Withdrawal](./mutex/atomic-withdrawal/) - lock-protected balance check and withdrawal
 - [x] [Word Frequency Snapshot](./mutex/word-frequency-snapshot/) - RWMutex-protected map cloning
 - [x] [Account Transfer](./mutex/account-transfer/) - ordered account locks and atomic IDs
+- [x] [Lazy Once Initialization](./mutex/lazy-once-initialization/) - sync.Once for shared lazy loading
+- [x] [Wait for Threshold](./mutex/wait-for-threshold/) - sync.Cond with predicate checks and broadcast
+- [x] [Condition Variable Queue](./mutex/condition-variable-queue/) - bounded ring buffer with condition variables
+- [x] [Writer-First Read-Write Lock](./mutex/writer-first-read-write-lock/) - writer tickets and reader admission control
+- [x] [Multi-Wallet Transaction](./mutex/multi-wallet-transaction/) - ordered per-wallet locks and consistent snapshots
 
 ## Context & Cancellation (0)
 
