@@ -27,9 +27,7 @@ func MapAll(ctx context.Context, nums []int, f func(context.Context, int) (int, 
 			case <-cCtx.Done():
 				once.Do(func() {
 						errCh <- cCtx.Err()
-						cancel()
 					})
-				cancel()
 			default:
 				val, err := f(cCtx, nums[i])
 				if err != nil {
