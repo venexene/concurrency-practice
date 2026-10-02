@@ -16,16 +16,16 @@ Each problem lives in its own directory with:
 
 ## Solved
 
-**Solved: 30 problems · 3 topics**
+**Solved: 35 problems · 4 topics**
 
-**Difficulty: 15 Easy · 12 Medium · 3 Hard**
+**Difficulty: 18 Easy · 14 Medium · 3 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
 | Channels & Streams | 10 |
 | Shared Memory & Locks | 10 |
-| Context & Cancellation | 0 |
+| Context & Cancellation | 5 |
 | Worker Pools & Semaphores | 0 |
 | Pipelines | 0 |
 | Timers & Scheduling | 0 |
@@ -72,9 +72,13 @@ Each problem lives in its own directory with:
 - [x] [Writer-First Read-Write Lock](./mutex/writer-first-read-write-lock/) - writer tickets and reader admission control
 - [x] [Multi-Wallet Transaction](./mutex/multi-wallet-transaction/) - ordered per-wallet locks and consistent snapshots
 
-## Context & Cancellation (0)
+## Context & Cancellation (5)
 
-No solved problems yet.
+- [x] [Cancelable Receive](./context/cancelable-receive/) - select between channel input and context cancellation
+- [x] [Cancelable Counter Generator](./context/cancelable-counter-generator/) - unbuffered stream with cancelable sends
+- [x] [Parent Deadline Budget](./context/parent-deadline-budget/) - child timeout bounded by the parent deadline
+- [x] [Parallel Map with First Error](./context/parallel-map-first-error/) - per-index results, first-error cancellation, WaitGroup
+- [x] [First Successful Response](./context/first-successful-response/) - first-success coordination, cancellation, and waiting for all calls
 
 ## Worker Pools & Semaphores (0)
 
