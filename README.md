@@ -14,18 +14,21 @@ Each problem lives in its own directory with:
 - `notes.md` — solution idea, complexity, and mistakes encountered
 - `solution_test.go` — tests for ordering, completion, and data races
 
+The full problem list is in [docs/TASKS.md](./docs/TASKS.md).
+See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for a practical guide to testing concurrent code (in Russian).
+
 ## Solved
 
-**Solved: 35 problems · 4 topics**
+**Solved: 39 problems · 4 topics · 1 problem in progress**
 
-**Difficulty: 18 Easy · 14 Medium · 3 Hard**
+**Solved difficulty: 18 Easy · 17 Medium · 4 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
 | Channels & Streams | 10 |
 | Shared Memory & Locks | 10 |
-| Context & Cancellation | 5 |
+| Context & Cancellation | 9 |
 | Worker Pools & Semaphores | 0 |
 | Pipelines | 0 |
 | Timers & Scheduling | 0 |
@@ -72,13 +75,34 @@ Each problem lives in its own directory with:
 - [x] [Writer-First Read-Write Lock](./mutex/writer-first-read-write-lock/) - writer tickets and reader admission control
 - [x] [Multi-Wallet Transaction](./mutex/multi-wallet-transaction/) - ordered per-wallet locks and consistent snapshots
 
-## Context & Cancellation (5)
+## Context & Cancellation (9 solved · 1 in progress)
 
 - [x] [Cancelable Receive](./context/cancelable-receive/) - select between channel input and context cancellation
 - [x] [Cancelable Counter Generator](./context/cancelable-counter-generator/) - unbuffered stream with cancelable sends
 - [x] [Parent Deadline Budget](./context/parent-deadline-budget/) - child timeout bounded by the parent deadline
 - [x] [Parallel Map with First Error](./context/parallel-map-first-error/) - per-index results, first-error cancellation, WaitGroup
 - [x] [First Successful Response](./context/first-successful-response/) - first-success coordination, cancellation, and waiting for all calls
+- [x] [Cleanup After Cancellation](./context/cleanup-after-cancellation/) - detached request values, independent timeout, synchronous cleanup
+- [x] [Isolated Request Scopes](./context/isolated-request-scopes/) - named branches, cancellation causes, existing and future branch cancellation
+- [x] [Shared Call with Independent Cancellation](./context/shared-call-independent-cancellation/) - one shared operation, independent waiters, cached results, concurrent Close
+- [x] [Wait for Next Version](./context/wait-for-next-version/) - consistent value-version pairs, sync.Cond, cancelable waits, broadcast shutdown
+- [ ] [Dynamic Task Tree](./context/dynamic-task-tree/) - dynamic descendants, task accounting, first-error cancellation; tests pass, completion of an already-started AfterFunc callback remains to be addressed ([notes](./context/dynamic-task-tree/notes.md))
+
+## Testing
+
+Run a single problem while developing:
+
+```sh
+go test -race -count=1 -timeout=30s ./context/dynamic-task-tree
+```
+
+Run all problems:
+
+```sh
+go test -race -count=1 -timeout=60s ./...
+```
+
+Tests cover ordering, cancellation, completion, and concurrent access. Passing tests and the race detector do not prove correctness for every possible goroutine schedule; see each problem's notes for the scenarios checked and remaining limitations.
 
 ## Worker Pools & Semaphores (0)
 
