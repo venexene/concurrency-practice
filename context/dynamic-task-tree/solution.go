@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"sync"
-)
+) 
 
 func main() {
 
@@ -30,15 +30,22 @@ func RunTree(ctx context.Context, root Task) error {
 
 	taskCounter := 1
 	var firstErr error
+
+	callbackDone := make(chan struct{})
 	stop := context.AfterFunc(parentCtx, func() {
+		defer close(callbackDone)
 		cond.L.Lock()
+		defer cond.L.Unlock()
 		if firstErr == nil {
 			firstErr = parentCtx.Err()
 			cancel()
 		}
-		cond.L.Unlock()
 	})
-	defer stop()
+	defer func() {
+		if !stop() {
+			<-callbackDone
+		}
+	}()
 
 	var run func(ctx context.Context, task Task) error
 	run = func(ctx context.Context, task Task) error {

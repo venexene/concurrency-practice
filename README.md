@@ -19,16 +19,16 @@ See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for a practical guide to testing conc
 
 ## Solved
 
-**Solved: 39 problems · 4 topics · 1 problem in progress**
+**Solved: 40 problems · 4 topics**
 
-**Solved difficulty: 18 Easy · 17 Medium · 4 Hard**
+**Solved difficulty: 18 Easy · 17 Medium · 5 Hard**
 
 | Topic | Solved |
 |------|--------|
 | Goroutines & Execution Order | 10 |
 | Channels & Streams | 10 |
 | Shared Memory & Locks | 10 |
-| Context & Cancellation | 9 |
+| Context & Cancellation | 10 |
 | Worker Pools & Semaphores | 0 |
 | Pipelines | 0 |
 | Timers & Scheduling | 0 |
@@ -75,7 +75,7 @@ See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for a practical guide to testing conc
 - [x] [Writer-First Read-Write Lock](./mutex/writer-first-read-write-lock/) - writer tickets and reader admission control
 - [x] [Multi-Wallet Transaction](./mutex/multi-wallet-transaction/) - ordered per-wallet locks and consistent snapshots
 
-## Context & Cancellation (9 solved · 1 in progress)
+## Context & Cancellation (10)
 
 - [x] [Cancelable Receive](./context/cancelable-receive/) - select between channel input and context cancellation
 - [x] [Cancelable Counter Generator](./context/cancelable-counter-generator/) - unbuffered stream with cancelable sends
@@ -86,7 +86,7 @@ See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for a practical guide to testing conc
 - [x] [Isolated Request Scopes](./context/isolated-request-scopes/) - named branches, cancellation causes, existing and future branch cancellation
 - [x] [Shared Call with Independent Cancellation](./context/shared-call-independent-cancellation/) - one shared operation, independent waiters, cached results, concurrent Close
 - [x] [Wait for Next Version](./context/wait-for-next-version/) - consistent value-version pairs, sync.Cond, cancelable waits, broadcast shutdown
-- [ ] [Dynamic Task Tree](./context/dynamic-task-tree/) - dynamic descendants, task accounting, first-error cancellation; tests pass, completion of an already-started AfterFunc callback remains to be addressed ([notes](./context/dynamic-task-tree/notes.md))
+- [x] [Dynamic Task Tree](./context/dynamic-task-tree/) - dynamic descendants, task accounting, first-error cancellation, waiting for the external cancellation callback
 
 ## Testing
 
